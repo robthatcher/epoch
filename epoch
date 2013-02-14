@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# Example script utility showing bash CASE syntax to handle simple single command line args
+
+# Epoch : default to number of seconds passed since start of 'epoch'. 
+
+# Rob Thatcher 2012
+
+VERSION='0.1'
+OS=`uname -s`
+
+# Make it somewhat multiplatform with by setting the $DATE var after setting $OS to be the output from uname -s
+
+case $OS in
+                 SunOS)
+			DATE=/usr/bin/date ;;
+                 Darwin)
+			DATE=/bin/date ;;
+                 Linux)
+			DATE=/bin/date ;;
+                 *)
+			echo -e "\nUnable to determine *nix variant, so we bailed out.\n"
+			exit 1
+esac
+
+# Another CASE which alters output dependent on command line arg $1, the 'pipe' is an OR.
+
+case $1 in
+	-h|--help)
+		echo -e "\nPossible flags which may be passed are :\n\n\t-v or --version for version check\n\t-h or --help this help\n\t-l or --long for verbose output\n"
+		exit 0;;
+	-v|--version)
+		echo -e "\nEpoch Script Version $VERSION\n" 
+		exit 0 ;;
+	-l|--long)
+		echo -e "\nTime, as seconds since Epoch `$DATE +%s`, OS determined to be $OS\n";;
+	*)
+		echo -e "`$DATE +%s`"
+esac
+
+
