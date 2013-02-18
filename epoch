@@ -1,15 +1,16 @@
 #!/bin/bash
 
-# Example script utility showing bash CASE syntax to handle simple single command line args
+# Name: epoch - default to number of seconds passed since start of 'epoch'. 
 
-# Epoch : default to number of seconds passed since start of 'epoch'. 
+# Comment: Example script utility showing bash CASE syntax to handle simple single command line args
 
-# Rob Thatcher 2012
+# Author: Rob Thatcher 2012
 
 VERSION='0.1'
-OS=`uname -s`
 
 # Make it somewhat multiplatform with by setting the $DATE var after setting $OS to be the output from uname -s
+
+OS=`uname -s`
 
 case $OS in
                  SunOS)
