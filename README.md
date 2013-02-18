@@ -1,4 +1,6 @@
 epoch
 =====
 
-Example script producing time as seconds passed since start of epoch, illustrates CASE syntax and simple CLI arg handling.
+Example script annd repo producing time as seconds passed since start of epoch,
+which also illustrates CASE syntax and simple CLI arg handling.
+
