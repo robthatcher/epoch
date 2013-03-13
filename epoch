@@ -2,11 +2,19 @@
 
 # Name: epoch - default to number of seconds passed since start of 'epoch'. 
 
-# Comment: Example script utility showing bash CASE syntax to handle simple single command line args
+# Comment: Example script utility showing bash CASE syntax to handle
+# simple single command line args
 
-# Author: Rob Thatcher 2012
+# Author: Rob Thatcher 2012 http://robthatcher.net
 
 VERSION='0.1'
+
+#TODO
+#
+# Add option to decode an epoch date into human readable 
+# i.e. 'date --date='@1363210887' to output 'Wed Mar 13 21:41:27 GMT 2013'
+
+# Vars - Vars
 
 # Make it somewhat multiplatform with by setting the $DATE var after setting $OS to be the output from uname -s
 
